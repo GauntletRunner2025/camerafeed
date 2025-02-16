@@ -1,0 +1,11 @@
+{
+    "name": "Gauntletrunner2025.Camerafeed.Tests",
+    "references": [
+        "Gauntletrunner2025.Camerafeed"
+    ],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": []
+}

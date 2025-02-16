@@ -1,0 +1,10 @@
+{
+    "name": "Gauntletrunner2025.Camerafeed.Editor",
+    "references": [
+      "Gauntletrunner2025.Camerafeed"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": []
+}
