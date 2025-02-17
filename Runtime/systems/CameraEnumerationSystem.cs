@@ -59,7 +59,16 @@ public partial class CameraEnumerationSystem : TaskSystem
 
                 var cameraEntity = ecb.CreateEntity();
                 ecb.AddComponent(cameraEntity, new CameraDeviceComponent { Value = device });
-                Debug.Log($"Created camera device entity for {device.name}");
+                if (device.frontFacing)
+                {
+                    ecb.AddComponent<FrontFacingCamera>(cameraEntity);
+                    Debug.Log($"Created front-facing camera entity for {device.name}");
+                }
+                else
+                {
+                    ecb.AddComponent<RearFacingCamera>(cameraEntity);
+                    Debug.Log($"Created rear-facing camera entity for {device.name}");
+                }
             }
 
             ecb.Playback(EntityManager);
