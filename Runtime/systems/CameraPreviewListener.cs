@@ -14,9 +14,6 @@ public partial class CameraPreviewListener : Listener
             .WithAll<ActiveCamera>()
             .WithEntityAccess())
         {
-
-            device.Value.previewResolution = new(1280, 720);
-
             Debug.Log($"Previewing active camera: {device.Value.name}");
             return true;
         }

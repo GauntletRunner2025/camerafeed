@@ -1,10 +1,20 @@
 {
     "name": "Gauntletrunner2025.Camerafeed.Editor",
+    "rootNamespace": "",
     "references": [
-      "Gauntletrunner2025.Camerafeed"
+        "Gauntletrunner2025.Camerafeed",
+        "Unity.Entities",
+        "Unity.Collections"
     ],
     "includePlatforms": [
         "Editor"
     ],
-    "excludePlatforms": []
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }
