@@ -1,11 +1,25 @@
 {
     "name": "Gauntletrunner2025.Camerafeed.Tests",
+    "rootNamespace": "",
     "references": [
-        "Gauntletrunner2025.Camerafeed"
-    ],
-    "optionalUnityReferences": [
-        "TestAssemblies"
+        "Gauntletrunner2025.Camerafeed",
+        "UnityEngine.TestRunner",
+        "UnityEditor.TestRunner",
+        "VideoKit.Runtime",
+        "Unity.Entities",
+        "Unity.Collections"
     ],
     "includePlatforms": [],
-    "excludePlatforms": []
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "nunit.framework.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_INCLUDE_TESTS"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

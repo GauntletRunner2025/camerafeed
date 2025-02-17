@@ -1,6 +1,21 @@
 {
     "name": "Gauntletrunner2025.Camerafeed",
-    "references": [],
+    "rootNamespace": "",
+    "references": [
+        "GUID:734d92eba21c94caba915361bd5ac177",
+        "GUID:e0cd26848372d4e5c891c569017e11f1",
+        "GUID:5d68c82d78bb05f46ac822f7eb0fedd6",
+        "GUID:5101a0603f1fb4544931b8e2d88e3911",
+        "GUID:f173dd28be520a4448fa786ef7e4906d",
+        "GUID:ea0d09e1d4c1e474f8486aef26fa522f"
+    ],
     "includePlatforms": [],
-    "excludePlatforms": []
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }
