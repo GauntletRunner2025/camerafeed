@@ -21,4 +21,9 @@ public partial class CameraPreviewListener : Listener
         Debug.LogWarning("Preview requested but no active camera found");
         return false;
     }
+
+    public override void SystemUpdate(EntityManager em)
+    {
+
+    }
 }

@@ -31,6 +31,11 @@ public partial class OnCameraActivated : Listener
         rgbaData = new NativeArray<byte>(width * height * 4, Allocator.Persistent);
         texture = new Texture2D(width, height, TextureFormat.RGBA32, false);
 
+
+        //Create a singleton containing the texture
+        Entity textureEntity = em.CreateEntity();
+        em.AddComponentData(textureEntity, new CameraPreviewTexture { Value = texture });
+
         cameraDevice.Value.StartRunning(OnNewFrame);
 
         Debug.Log("Camera activated!");
@@ -53,4 +58,26 @@ public partial class OnCameraActivated : Listener
             cameraBuffer.CopyTo(previewBuffer, rotation: PixelBuffer.Rotation._180);
         }
     }
+
+    public override void SystemUpdate(EntityManager em)
+    {
+
+        if (null == texture)
+        {
+            return;
+        }
+
+        // Update the preview texture with the latest preview data
+        lock (texture)
+            texture.GetRawTextureData<byte>().CopyFrom(rgbaData);
+
+        // Upload the texture data to the GPU for display
+        texture.Apply();
+
+    }
+}
+
+internal class CameraPreviewTexture : IComponentData
+{
+    public Texture2D Value;
 }

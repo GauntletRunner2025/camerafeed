@@ -3,6 +3,12 @@ using Unity.Entities;
 using Unity.Collections;
 using UnityEngine;
 struct CameraActivated : IComponentData { }
+struct NeedPreviewTextureHookupToUIElement : IComponentData { }
+class CameraPreviewUIElement : IComponentData
+{
+    public VisualElement Value;
+}
+
 public partial class CameraPreviewUI : VisualElementUI
 {
     protected override string Name => "camera-preview";
@@ -35,12 +41,13 @@ public partial class CameraPreviewUI : VisualElementUI
         }
 
         ecb.Playback(EntityManager);
-
     }
+
 
     protected override void Initialize(VisualElement root, VisualElement element)
     {
-
+        var e = EntityManager.CreateEntity();
+        EntityManager.AddComponentData(e, new CameraPreviewUIElement { Value = element });
     }
 
 }
